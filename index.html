@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+ 
+ /* Set display to none for image*/
+ #image {
+     display: none;
+     height: 1200px;
+     width: 1520px;
+     position: absolute;
+     top: -50px;
+     left: -250px;
+ }
+</style>
+</style>
+</head>
+<body>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+
+  <img src="https://drscdn.500px.org/photo/1057416161/m%3D900/v2?sig=f3d8b04d98e7e2411b818e1400eb3317a8944f47b80c6e1e7b8f1e82871ca159" style="width:100%">
+  <div class="text">Một người đàn ông mua một chiếc camera cũ, bụi bẫm trên kệ</div>
+</div>
+
+<div class="mySlides fade">
+
+  <img src="https://drscdn.500px.org/photo/1057416162/m%3D256/v2?sig=f76f914595e302d2d73577d30c6d6c6989b2d2b3086e92622ca920538fa66456" style="width:100%">
+  <div class="text">Tôi kể đứa con gái của mình rằng chúng ta có thể bắt gặp được ông già noel</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="https://drscdn.500px.org/photo/1057416163/m%3D256/v2?sig=d4ee021ac7ac282883a9089645123a559479b46af866aa28d4f0d4354e42fd40" style="width:100%">
+  <div class="text">Đứa con gái tôi hào hứng nhảy tưng tửng tìm chổ đặt camera.</div>
+</div>
+
+
+<div class="mySlides fade">
+
+  <img src="https://drscdn.500px.org/photo/1057416164/m%3D256/v2?sig=5e0f948b26c86e42b7710aa844427a68654ef2401d64809a8854b8f1d179d23b" style="width:100%">
+  <div class="text">Cả nhà tận hưởng giáng sinh như thường lệ, chơi những trò chơi gia đình</div>
+</div>
+
+<div class="mySlides fade">
+
+    <img src="https://drscdn.500px.org/photo/1057416160/m%3D256/v2?sig=5739896dc7fca634685e894aa79614a11117537d904ddf57babb64d9de42cf98" style="width:100%">
+    <div class="text">mở quà, chơi những trò chơi gia đình</div>
+  </div>
+  
+<div class="mySlides fade">
+
+    <img src="https://drscdn.500px.org/photo/1057416166/m%3D256/v2?sig=0683f7f18a73bb42f409867f67576e1ee84dee8bc249f21e9a25421939edebb6" style="width:100%">
+    <div class="text">Tới tối, vợ và tôi nghe được những tiếng như vó ngựa trên nóc nhà hoặc tiếng chuông, </div>
+  </div>
+
+  <div class="mySlides fade">
+
+    <img src="https://drscdn.500px.org/photo/1057417141/m%3D900/v2?sig=ada4207af5d0590b9354e687bede3d34d94333dde31567306c3502604e5ec943" style="width:100%">
+    <div class="text">lúc chúng tui check camera mới, thì có một bóng người xuất hiện</div>
+  </div>
+
+
+
+
+
+
+
+
+ <div>
+
+ 
+        <!-- Add id to image -->
+        <img id="image" src=
+"https://drscdn.500px.org/photo/1057416165/m%3D256/v2?sig=9a49b3f3c75c55d3b11102992e38f044c02e6141d1b7d374b1e7bcb7fc8d470f"
+            alt="GFG image" />
+    </div>
+ 
+    <button type="button"
+        onclick="show()" id="btnID">
+        .
+    </button>
+ 
+    <script>
+        function show() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID')
+                    .style.display = "none";
+        }
+    </script>
+
+
+
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+    <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 8000); // Change image every ... seconds
+}
+</script>
+
+</body>
+</html> 
